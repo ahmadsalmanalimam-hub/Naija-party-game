@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  :root {
+    --font-display: var(--font-fredoka), system-ui, sans-serif;
+    --font-sans: var(--font-jakarta), system-ui, sans-serif;
+    --font-mono: var(--font-jetbrains), monospace;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #520ca3;
+    color: #ffffff;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.arcade-bg {
+  background-color: #520ca3;
+  background-image:
+    radial-gradient(circle at 50% 42%, rgba(168, 85, 247, 0.34) 0%, transparent 58%),
+    radial-gradient(circle at 50% 50%, rgba(126, 34, 206, 0.48) 0%, rgba(59, 7, 100, 0.72) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 26px 26px, rgba(255, 255, 255, 0.08) 12px, transparent 13px);
+  background-size: 100% 100%, 100% 100%, 52px 52px, 52px 52px, 52px 52px;
+}
+
+.arcade-card {
+  border: 3px solid #1a0536;
+  box-shadow: 0 5px 0 #1a0536;
+}
+
+.arcade-btn {
+  border: 3px solid #1a0536;
+  box-shadow: 0 4px 0 #1a0536;
+  transition: transform 90ms ease-out, box-shadow 90ms ease-out, filter 120ms ease-out;
+}
+
+.arcade-btn:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #1a0536;
+}
+
+.cartoon-outline {
+  -webkit-text-stroke: 6px #1e063b;
+  paint-order: stroke fill;
+  text-shadow: 0 4px 0 #1e063b;
+}
+
+.cartoon-outline-sm {
+  -webkit-text-stroke: 3.5px #1e063b;
+  paint-order: stroke fill;
+  text-shadow: 0 2px 0 #1e063b;
+}
+
+.sunburst-yellow {
+  background: repeating-conic-gradient(
+    from 0deg,
+    #facc15 0deg 15deg,
+    #eab308 15deg 30deg
+  );
+}
+
+.sunburst-blue {
+  background: repeating-conic-gradient(
+    from 0deg,
+    #60a5fa 0deg 15deg,
+    #2563eb 15deg 30deg
+  );
+}
+
+.sunburst-red {
+  background: repeating-conic-gradient(
+    from 0deg,
+    #f87171 0deg 15deg,
+    #dc2626 15deg 30deg
+  );
+}
+
+.sunburst-green {
+  background: repeating-conic-gradient(
+    from 0deg,
+    #4ade80 0deg 15deg,
+    #16a34a 15deg 30deg
+  );
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.5s ease-in-out infinite;
+}
+
+.touch-game-surface {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

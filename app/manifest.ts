@@ -1,0 +1,37 @@
+import type { MetadataRoute } from 'next';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    id: '/',
+    name: 'NAIJA PARTY — 234 PLAYERS',
+    short_name: 'NAIJA PARTY',
+    description:
+      'One Phone. Four Players. Endless Fun. Offline same-phone cartoon arcade multiplayer mini-games.',
+    start_url: '/',
+    scope: '/',
+    display: 'standalone',
+    orientation: 'landscape',
+    background_color: '#2E1065',
+    theme_color: '#4C1D95',
+    icons: [
+      {
+        src: '/pwa-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'any',
+      },
+      {
+        src: '/pwa-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'any',
+      },
+      {
+        src: '/pwa-maskable-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
+    ],
+  };
+}

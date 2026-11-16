@@ -1,0 +1,8 @@
+{
+  "name": "NAIJA PARTY",
+  "description": "One Phone. Four Players. Endless Fun. An offline same-phone multiplayer mini-game collection for Android and mobile web.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
